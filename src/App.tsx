@@ -2,7 +2,7 @@ import Chart from './components/Chart';
 import './App.css';
 
 function App() {
-  return <Chart />;
+  return <Chart hello="world" />;
 }
 
 export default App;
