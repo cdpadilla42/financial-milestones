@@ -8,4 +8,9 @@ describe('This works', () => {
     const wrapper = mount(<Chart data={data} />);
     expect(wrapper.props().data).toEqual(data);
   });
+
+  it.skip('renders with no error message', () => {
+    const wrapper = mount(<Chart data={data} />);
+    // expect(wrapper.state('error')).toEqual(null);
+  });
 });
