@@ -1,5 +1,11 @@
 import React from 'react';
-import { VictoryLine, VictoryChart, VictoryAxis, VictoryTheme } from 'victory';
+import {
+  VictoryLine,
+  VictoryChart,
+  VictoryAxis,
+  VictoryVoronoiContainer,
+  VictoryTheme,
+} from 'victory';
 import data from '../library/sampleData';
 
 type Props = {
@@ -13,6 +19,9 @@ const Chart = (props: Props) => {
       // prevent it from overlapping the axis
       domainPadding={20}
       theme={VictoryTheme.material}
+      containerComponent={
+        <VictoryVoronoiContainer labels={({ datum }) => `${datum.earnings}`} />
+      }
     >
       <VictoryAxis
         // tickValues specifies both the number of ticks and where
